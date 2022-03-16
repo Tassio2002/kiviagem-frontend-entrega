@@ -1,0 +1,29 @@
+.error-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(179, 132, 61);
+    padding: 3em 0;
+}
+
+.error-text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Merienda One', cursive;
+    color: white;
+}
+
+.error-text h1{
+    font-size: 220px;
+    margin: 0;
+}
+
+.error-text h3 {
+    font-size: 34px;
+}
+
+.error-img img{
+    width: 100%;
+    max-width: 463px;
+}
+

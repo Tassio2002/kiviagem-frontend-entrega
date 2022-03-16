@@ -1,0 +1,12 @@
+.promos {
+    display: flex;
+}
+
+/*****Media queries*****/
+
+@media screen and (max-width: 1200px){
+    .promos {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,127 @@
+.contact {
+    padding: 5em;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right top, #6c0e23, #640a2e, #590d37, #4c123e, #3c1742);
+}
+
+.contact form {
+    width: 100%;
+    max-width: 600px;
+    padding: 4em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white; 
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact form p, h1 {
+    text-align: center;
+    margin: 0.2em 0;
+}
+
+.contact form p {
+    margin-bottom: 3em;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact form input {
+    padding: 1em 0;
+    margin-bottom: 1em;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid white;
+    background-color: #783e61;
+}
+
+.contact form input::placeholder {
+    color: white;
+}
+
+.contact form textarea {
+    border: 1px solid white;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    background-color: #783e61;
+}
+
+.contact form textarea::placeholder {
+    color: white;
+}
+
+.contact form input[type="date"]{
+    color: white;
+}
+
+.contact form button {
+    margin-top: 1em;
+    padding: 0.8em 0;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    color: white;
+    outline: 2px solid white;
+    background-color: #783e61;
+    transition: 0.5s 0s ease;
+}
+
+/*****Media queries*****/
+
+@media screen and (max-width: 1200px) {
+    .contact {
+        padding: 3em;
+    }
+
+    .contact form {
+        width: 100%;
+        max-width: 500px;
+        padding: 4em 2em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .contact form {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contact {
+        padding: 3em 1em;
+    }
+
+    .contact form {
+        max-width: 300px;
+        padding: 2em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact {
+        padding: 2em 0.5em;
+    }
+
+    .contact form {
+        padding: 2em 1em;
+        max-width: 250px;
+    }
+
+    .contact form h1{
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,151 @@
+.list-container {
+  padding: 0 5em 2em 5em;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: end;
+}
+
+.btn-crud {
+  width: 100%;
+  max-width: 10em;
+  padding: 1em;
+  margin: 1em 2em;
+  border-bottom: 5px solid #02bb02;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: #01ca01;
+  box-shadow: 1px 3px 5px 0px rgba(199, 171, 171, 0.548);
+}
+
+.btn-crud:hover {
+  border-bottom: 5px solid #02bb02d8;
+  background-color: #01ca01d8;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+tr .row-edit {
+  display: flex;
+  justify-content: center;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.edit-btn {
+  width: 100%;
+  max-width: 5em;
+  padding: 0.5em;
+  margin: 0.3em 0;
+  border-bottom: 5px solid #0299df;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: #02abfa;
+  box-shadow: 1px 3px 5px 0px rgba(199, 171, 171, 0.548);
+}
+
+.edit-btn:hover {
+  border-bottom: 5px solid #01abfa;
+  background-color: #1DB5FE;
+}
+
+.delete-btn {
+  padding: 0.8em 2em;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 5px solid #b40101;
+  border-radius: 1em ;
+  font-weight: bold;
+  color: white;
+  background-color: #ff1212;
+  box-shadow: 1px 3px 5px 0px rgba(199, 171, 171, 0.548);
+  cursor: pointer;
+}
+  
+.delete-btn:hover {
+  border-bottom: 5px solid #e00000;
+  background-color: #fa3434;
+}
+
+/****Media queries****/
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+  

@@ -1,0 +1,146 @@
+.final-section {
+    width: 100%;
+    display: flex;
+    background-color: #D3F6DB;
+}
+
+.final-info {
+    width: 50%;
+    padding: 2em 4em;
+    color: #503D42;
+}
+
+.final-info h1{
+    margin: 0;
+    font-size: 30px;
+}
+
+.text-color{
+    color: #3C1742;
+}
+
+.final-info p {
+    font-size: 17px;
+}
+
+.final-list {
+    list-style: none;
+}
+
+.final-list li{
+    display: flex;
+    align-items: center;
+}
+
+.final-icon {
+    margin-right: 10px;
+    font-size: 22px;
+    color: #3C1742;
+}
+
+.final-btn {
+    padding: 1em;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #3C1742;
+    cursor: pointer;
+}
+
+.final-btn:hover{
+    background-color: #3c1742e8;
+}
+
+.final-image {
+    width: 50%;
+}
+
+.final-image-principal{
+    width: 100%;
+    border-bottom-left-radius: 250px;
+}
+
+.image1 {
+    position: relative;
+}
+
+.image2 {
+    position: absolute;
+    top: 2022px;
+}
+
+.image2 img {
+    max-width: 450px;
+}
+
+/*****Media queries*****/
+
+@media screen and (max-width: 1800px) {
+    .image2 {
+        max-width: 300px;
+        position: absolute;
+        top: 1970px;
+    }
+
+    .image2 img {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .image1 img {
+        height: 300px;
+    }
+
+    .image2 {
+        max-width: 300px;
+        position: absolute;
+        top: 1850px;
+    }
+}
+
+@media screen and (max-width: 1275px) {
+    .final-image {
+        background-image: url(../assets/img/final-image.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+    .image1 img {
+        display: none;
+    }
+    
+    .image2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .final-info {
+        width: 100%;
+    }
+
+    .final-info h1{
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .final-image {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .final-info {
+        padding: 2em 1em;
+        text-align: center;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        text-align: justify;
+    }
+}
