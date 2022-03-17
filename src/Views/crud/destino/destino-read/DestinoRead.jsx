@@ -1,19 +1,18 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import clienteService from '../../../../../services/cliente.service';
+import destinoService from '../../../../services/destino.service';
 
-import './assets/styles.css'
 
-const ClienteRead = () => {
+const DestinoRead = () => {
 
-    const [clientes, setClientes] = useState([]);
+    const [destinos, setDestinos] = useState([]);
 
     useEffect(() => {
-        clienteService.getAll()
+        destinoService.getAll()
             .then(response => {
-                console.log('mostrando os clientes', response.data);
-                setClientes(response.data);
+                console.log('mostrando os destinos', response.data);
+                setDestinos(response.data);
             })
             .catch(error => {
                 console.log('erro', error);
@@ -22,45 +21,43 @@ const ClienteRead = () => {
 
     const handleDelete = (id) => {
         console.log('impimindo id', id);
-        clienteService.remove(id)
+        destinoService.remove(id)
             .then(response => {
-                alert('Cliente deletado', response.data);
+                alert('Destino deletado', response.data);
                 window.location.reload();
             })
             .catch(error => {
                 console.log('Algo deu errado', error);
             })
     }
-
+    
     return (
         <div className="list-container">
-            <h1 className="table-title">Lista de Clientes</h1>
+            <h1 className="table-title">Lista de Destinos</h1>
             <div className="btn-container">
-                <Link to="/addCliente" className="btn-crud">Adicionar Cliente</Link>
+                <Link to="/addDestino" className="btn-crud">Adicionar Destino</Link>
             </div>
             <table class="table table-dark table-striped">
                 <thead>
                     <tr className="thead">
-                        <th scope="col">Nome</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Telefone</th>
+                        <th scope="col">Local</th>
+                        <th scope="col">Preço</th>
                         <th scope="col">Editar</th>
                         <th scope="col">Apagar</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        clientes.map(cliente => (
-                            <tr key={cliente.id}>
-                                <td data-label="Nome">{cliente.nome}</td>
-                                <td data-label="Email">{cliente.email}</td>
-                                <td data-label="Telefone">{cliente.telefone}</td>
+                        destinos.map(destino => (
+                            <tr key={destino.id}>
+                                <td data-label="Nome">{destino.local}</td>
+                                <td data-label="Email">{`R$${destino.preco}`}</td>
                                 <td className="row-edit">
-                                    <Link className="edit-btn" to={`/clientes/edit/${cliente.id}`}>Editar</Link>
+                                    <Link className="edit-btn" to={`/destinos/edit/${destino.id}`}>Editar</Link>
                                 </td>
                                 <td>
                                     <button className="delete-btn" onClick={()=>{
-                                    handleDelete(cliente.id);
+                                    handleDelete(destino.id);
                                     }}>Apagar</button>
                                 </td>
                             </tr>
@@ -71,4 +68,5 @@ const ClienteRead = () => {
         </div>
     );
 }
-export default ClienteRead;
+ 
+export default DestinoRead;

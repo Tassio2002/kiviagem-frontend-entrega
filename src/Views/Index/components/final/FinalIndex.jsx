@@ -49,9 +49,9 @@ const FinalSection = () => {
 
             <div className="final-image">
                 <div className="image1">
-                    <img src={FinalImage} alt="Compras online" className='final-image-principal'/>
+                    <img src={FinalImage} alt="Mulher com um cartão na mão prestes a fazer uma compra online no seu notebook." className='final-image-principal'/>
                 </div>
-              
+                        
             </div>
         </section>
      );

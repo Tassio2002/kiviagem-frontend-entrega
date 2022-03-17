@@ -5,7 +5,9 @@ import '../css/testemonials.css';
 const TestemonialSection = (props) => {
     return (       
         <div className="testemonial-card">
-            <img src={props.testImage} alt="" />
+            <img 
+            src={props.testImage} 
+            alt={props.alt} />
             <p>{props.testComent}</p>
             <span className='test-nome'>{props.testName}</span>
         </div>

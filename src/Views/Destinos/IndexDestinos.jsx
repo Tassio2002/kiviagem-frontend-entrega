@@ -27,6 +27,7 @@ const IndexDestinos = () => {
                         price={6499}
                         note="9,71"
                         visits="75 mil"
+                        alt="Paris durante o dia."
                     />
                     <CardDestino
                         image={Tailandia}
@@ -36,6 +37,7 @@ const IndexDestinos = () => {
                         price={6499}
                         note="9,54"
                         visits="65 mil"
+                        alt="Orla da Ilha de Phuket."
                     />
                     <CardDestino
                         image={Republica}
@@ -45,6 +47,7 @@ const IndexDestinos = () => {
                         price={6499}
                         note="8,88"
                         visits="46 mil"
+                        alt="Cidade de Praga a noite."
                     />
                     <CardDestino
                         image={Portugal}
@@ -54,6 +57,7 @@ const IndexDestinos = () => {
                         price={6499}
                         note="8,85"
                         visits="115 mil"
+                        alt="Lisboa num dia chuvoso."
                     />
 
                     <CardDestino
@@ -64,6 +68,7 @@ const IndexDestinos = () => {
                         price={6499}
                         note="8,85"
                         visits="32 mil"
+                        alt="Cidade de Lima com varios balões no ceu."
                     />
 
                     <CardDestino
@@ -74,6 +79,7 @@ const IndexDestinos = () => {
                         price={6499}
                         note="8,80"
                         visits="42 mil"
+                        alt="Praia da cidade do Cabo vista do topo de uma montanha."
                     />
 
                     <CardDestino
@@ -84,6 +90,7 @@ const IndexDestinos = () => {
                         price={6499}
                         note="8,71"
                         visits="77 mil"
+                        alt="Linda favela em bogotá."
                     />
 
                     <CardDestino
@@ -94,6 +101,7 @@ const IndexDestinos = () => {
                         price={6499}
                         note="8,67"
                         visits="23 mil"
+                        alt="Templo vermelho em tokyo."
                     />
 
                 </div>

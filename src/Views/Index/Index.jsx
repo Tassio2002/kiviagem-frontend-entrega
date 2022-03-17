@@ -8,22 +8,31 @@ import ParisImage from './assets/img/paris.png'
 
 import './css/index.css'
 import FinalSection from './components/final/FinalIndex';
-import ClientRead from '../crud/cliente/components/cliente-read/ClienteRead';
+
 
 const Index = () => {
-    return ( 
+    return (
         <div>
             <MainIndex />
             <ServicesSection />
             <section className='promos'>
-                <PromoCard city="TÓQUIO" percent="20" image={TokyoImage}/>
-                <PromoCard city="PARIS" percent="30" image={ParisImage}/>
+                <PromoCard
+                city="TÓKYO"
+                percent="20"
+                image={TokyoImage}
+                alt="Um centro urbano em Tokyo no Japão, muitas pessoas na rua, vários comércios."
+                />
+
+                <PromoCard 
+                city="PARIS"
+                percent="30"
+                image={ParisImage}
+                alt="Visão a distância da torre eiffel, céu bem azul com poucas nuvens"
+                />
             </section>
-            <ClientRead />
             <FinalSection />
-            
         </div>
     );
 }
- 
+
 export default Index;

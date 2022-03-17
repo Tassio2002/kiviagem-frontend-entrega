@@ -32,7 +32,7 @@ const ServicesSection = () => {
             </div>
 
             <div className="img-container">
-                <img src={CellPhone} alt="" />
+                <img src={CellPhone} alt="Mockup de um smartphone contendo o site atual na versão para dispositivos móveis." />
             </div>                          
         </section>
      );

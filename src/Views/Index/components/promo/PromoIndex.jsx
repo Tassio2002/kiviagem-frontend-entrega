@@ -31,7 +31,7 @@ const PromoCard = (props) => {
             </div>
 
             <div className="card-image">
-                <img src={props.image} alt="tokyo" />
+                <img src={props.image} alt={props.alt} />
             </div>
         </div>
      );

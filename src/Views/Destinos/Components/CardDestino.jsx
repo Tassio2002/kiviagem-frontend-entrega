@@ -6,7 +6,7 @@ const CardDestino = (props) => {
         <div className="card-container">
 
             <div className="card-top">
-                <img src={props.image} alt="" />
+                <img src={props.image} alt={props.alt} />
             </div>
 
             <div className="card-mid">

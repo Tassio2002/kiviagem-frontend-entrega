@@ -18,12 +18,12 @@ const Footer = () => {
     return ( 
         <footer>
             <div className='images'>
-                <img src={img1} alt="imagem" className='footer-images' id='img1'/>
-                <img src={img2} alt="imagem" className='footer-images' id='img2'/>
-                <img src={img3} alt="imagem" className='footer-images' id='img3'/>
-                <img src={img4} alt="imagem" className='footer-images' id='img4'/>
-                <img src={img5} alt="imagem" className='footer-images' id='img5'/>
-                <img src={img6} alt="imagem" className='footer-images' id='img6'/>
+                <img src={img1} alt="Montanha com varias casas tipicas da Grécia." className='footer-images' id='img1'/>
+                <img src={img2} alt="Enorm montanha com uma pessoa no topo observando a paiságem." className='footer-images' id='img2'/>
+                <img src={img3} alt="Area urbana de paris, com a torre eiffel de fundo." className='footer-images' id='img3'/>
+                <img src={img4} alt="Mulher fotografando um monumento." className='footer-images' id='img4'/>
+                <img src={img5} alt="Barco decorado com vários homens remando em Veneza." className='footer-images' id='img5'/>
+                <img src={img6} alt="Centro de nova york com muitos turistas." className='footer-images' id='img6'/>
             </div>
 
             <div className='social-media'>

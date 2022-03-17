@@ -14,7 +14,7 @@ const HeaderDestinos = () => {
             </div>
 
             <div className='header-image'>
-                <img src={HeaderImage} alt="" />
+                <img src={HeaderImage} alt="Ilustração de um jovem apontando para uma montanha" />
             </div>   
         </header>
 

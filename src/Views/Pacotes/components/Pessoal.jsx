@@ -9,9 +9,9 @@ const PessoalSection = () => {
     return ( 
         <section className="pessoal">
             <div className="photos">
-                <img src={Pessoal1} alt="" />
-                <img src={Pessoal2} alt="" />
-                <img src={Pessoal3} alt="" />
+                <img src={Pessoal1} alt="Mulher loira debaixo de uma arvore." />
+                <img src={Pessoal2} alt="Mulher morena a frente de uma parede amarela." />
+                <img src={Pessoal3} alt="Homen negro segurando um globo." />
                 <h2>Sobre nosso pessoal</h2>
             </div>
             <div className="pessoal-info">

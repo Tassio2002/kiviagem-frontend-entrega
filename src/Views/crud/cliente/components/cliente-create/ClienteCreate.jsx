@@ -4,6 +4,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import clienteService from '../../../../../services/cliente.service';
 
+import ClienteForm from './assets/cliente-form.jpg'
+
 import './assets/styles.css'
 
 const ClienteCreate = () => {
@@ -23,7 +25,7 @@ const ClienteCreate = () => {
             clienteService.update(cliente)
                 .then(response => {
                     alert('Cliente editado', response.data);
-                    navigate('/ClienteCreate');
+                    navigate('/ClienteCRUD');
                 })
                 .catch(error => {
                     console.log('Algo deu errado', error);
@@ -35,7 +37,7 @@ const ClienteCreate = () => {
                 .then(response => {
                     //trocar por alert
                     alert('Cliente adicionado', response.data);
-                    navigate('/ClienteCreate');
+                    navigate('/ClienteCRUD');
                 })
                 .catch(error => {
                     console.log('Algo deu errado', error);
@@ -44,7 +46,7 @@ const ClienteCreate = () => {
     }
 
     useEffect(() => {
-        if(id) {
+        if (id) {
             clienteService.get(id)
                 .then(cliente => {
                     setNome(cliente.data.nome);
@@ -58,49 +60,53 @@ const ClienteCreate = () => {
     }, [])
 
     return (
-        <>
-            <h1>Adicionar cliente</h1>
+        <div className="flex-container-form">
+            
             <div className="form-container">
-                <form>
-                    <h3>Insira os dados do cliente</h3>
+                <div className="form-img">
+                    <img src={ClienteForm} alt="" />
+                </div>
 
-                    <label>Nome:</label>
-                    <input
-                        type="text"
-                        className="form-imput"
-                        id="nome"
-                        value={nome}
-                        onChange={(c) => setNome(c.target.value)}
-                        placeholder="digite o nome do cliente.."
-                    />
+                <div className="form">
+                    <form>
+                        <h2>Adicionar cliente</h2>
+                        <label>Nome:</label>
+                        <input
+                            type="text"
+                            className="form-imput"
+                            id="nome"
+                            value={nome}
+                            onChange={(c) => setNome(c.target.value)}
+                            placeholder="Digite o nome do cliente.."
+                        />
 
-                    <label>Email:</label>
-                    <input
-                        type="text"
-                        className="form-imput"
-                        id="email"
-                        value={email}
-                        onChange={(c) => setEmail(c.target.value)}
-                        placeholder="digite o email do cliente.."
-                    />
+                        <label>Email:</label>
+                        <input
+                            type="email"
+                            className="form-imput"
+                            id="email"
+                            value={email}
+                            onChange={(c) => setEmail(c.target.value)}
+                            placeholder="Digite o email do cliente.."
+                        />
 
-                    <label>Telefone:</label>
-                    <input
-                        type="text"
-                        className="form-imput"
-                        id="telefone"
-                        value={telefone}
-                        onChange={(c) => setTelefone(c.target.value)}
-                        placeholder="digite o telefone do cliente.."
-                    />
-                    <div className="btn-form">
-                        <button className="btn-save" onClick={(c) => saveCliente(c)}>Salvar</button>
-                        <Link to='/ClienteCreate'>Voltar</Link>
-                    </div>
-                </form>
-
+                        <label>Telefone:</label>
+                        <input
+                            type="phone"
+                            className="form-imput"
+                            id="telefone"
+                            value={telefone}
+                            onChange={(c) => setTelefone(c.target.value)}
+                            placeholder="Digite o telefone do cliente.."
+                        />
+                        <div className="btn-form">
+                            <button className="btn-save" onClick={(c) => saveCliente(c)}>Salvar</button>
+                            <Link to='/ClienteCRUD' className="btn-back">Voltar</Link>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </>
+        </div>
     );
 }
 
